@@ -1,0 +1,103 @@
+.outro {
+    background-image: url(../../images/на\ собаках.svg);
+    background-repeat: no-repeat;
+    min-height: 200px;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.outro__link {
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+}
+
+.outro__opacity {
+    position: absolute;
+    background-color: #2A2C2F;
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+}
+
+.outro__opacity:hover {
+    opacity: 0.8;
+}
+
+.outro__title {
+    font-size: 32px;
+    line-height: 35px;
+    text-align: center;
+    font-weight: 900;
+    margin: 33px 16px 16px 16px;
+    z-index: 2;
+    max-width: 288px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* я увеличила паддинги (вместо 16px из макета и поставила 20px, потому что иначе не получается,
+    чтобы слова "на собаках" перемещались на следующую строчку */
+    box-sizing: border-box;
+}
+
+.outro__description {
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    margin: 0;
+    padding: 0px 20px 16px 20px;
+    /* здесь то же саоме — увеличила паддинги (вместо 16px из макета и поставила 20px, потому что иначе не получается,
+    чтобы слова стояли как надо в две строчки */
+    z-index: 2;
+    max-width: 288px;
+}
+
+
+/* ниже медиазапросы  321px 500px 768px я придумала, потому что background-image .outro очень печально обрезается, возможно, я туплю и такое не нужно*/
+
+@media screen and (min-width:321px) {
+    .outro {
+        min-height: 300px;
+    }
+}
+
+@media screen and (min-width:500px) {
+    .outro {
+        min-height: 400px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .outro {
+        min-height: 480px;
+    }
+    .outro__title {
+        font-size: 72px;
+        line-height: 76px;
+        max-width: 560px;
+    }
+    .outro__description {
+        font-size: 18px;
+        line-height: 22px;
+        max-width: 360px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .outro {
+        min-height: 640px;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .outro {
+        min-height: 740px;
+    }
+}

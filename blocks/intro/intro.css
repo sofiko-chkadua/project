@@ -1,0 +1,198 @@
+    .intro__front-image {
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 8px;
+        width: 100%;
+    }
+    
+    .intro__main-title {
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 44px;
+        text-align: center;
+        margin: 0 auto;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 16px;
+        max-width: 720px;
+    }
+    
+    .intro__subtitle {
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        font-weight: normal;
+        margin: 0 auto;
+        padding-bottom: 40px;
+        max-width: 640px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    
+    .intro__image-description {
+        font-size: 10px;
+        line-height: 14px;
+        letter-spacing: 0.15em;
+        margin: 0;
+        padding-bottom: 64px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    
+    .intro__title {
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 35px;
+        margin: 0;
+        padding-bottom: 40px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    
+    .intro__text {
+        font-size: 16px;
+        line-height: 163%;
+        margin: 0;
+        padding-bottom: 32px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    
+    .intro__subtext {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 18px;
+        margin: 0;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    
+    .intro__span {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 18px;
+        margin: 0;
+    }
+    
+    .intro__image-container {
+        /* нужно ли здесь задавать эту максимальную ширину? */
+        max-width: 1184px;
+        padding-left: 16px;
+        padding-right: 16px;
+        display: grid;
+        grid-gap: 12px;
+    }
+    
+    .intro__subtext-container {
+        padding-bottom: 64px;
+    }
+    
+    .intro__image {
+        background-size: cover;
+        width: 100%;
+    }
+    
+    .intro__image:last-child {
+        margin-bottom: 64px;
+    }
+    
+    @media screen and (min-width:768px) {
+        .intro__image-container {
+            grid-template-columns: repeat(2, 2fr);
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+        .intro__main-title {
+            font-size: 96px;
+            line-height: 100px;
+            /* padding-left: 0; */
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-bottom: 32px;
+        }
+        .intro__subtitle {
+            font-size: 30px;
+            line-height: 36px;
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-bottom: 56px;
+        }
+        .intro__title {
+            font-size: 54px;
+            line-height: 58px;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+        .intro__image-description {
+            /* padding-left: 0; */
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+        .intro__text {
+            /* padding-left: 0; */
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+        .intro__subtext {
+            /* padding-left: 0; */
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+        .intro__subtext-container {
+            padding-bottom: 88px;
+        }
+    }
+    
+    @media screen and (min-width:1024px) {
+        .intro__image-container {
+            grid-template-columns: repeat(3, 3fr);
+            padding: 0;
+        }
+        .intro__text {
+            padding-left: 0px;
+            max-width: 690px;
+        }
+        .intro__subtext-container {
+            padding-bottom: 92px;
+        }
+        .intro__main-title {
+            padding-left: 48px;
+        }
+        .intro__subtitle {
+            padding-left: 48px;
+        }
+        .intro__image-description {
+            padding-left: 48px;
+        }
+        .intro__title {
+            padding-left: 48px;
+        }
+        .intro__subtext {
+            padding-left: 48px;
+        }
+    }
+    
+    @media screen and (min-width:1280px) {
+        .intro__subtitle {
+            padding-bottom: 64px;
+        }
+        .intro__image-container {
+            grid-template-columns: repeat(4, 4fr);
+            padding: 0;
+        }
+        .intro__main-title {
+            padding-left: 0px;
+        }
+        .intro__subtitle {
+            padding-left: 0px;
+        }
+        .intro__image-description {
+            padding-left: 0px;
+        }
+        .intro__title {
+            padding-left: 0px;
+        }
+        .intro__subtext {
+            padding-left: 0px;
+        }
+    }

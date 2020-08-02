@@ -1,0 +1,17 @@
+        .content {
+            margin: 0 auto;
+            display: grid;
+            grid-gap: 64px;
+        }
+        
+        @media screen and (min-width:768px) {
+            .content {
+                grid-gap: 88px;
+            }
+        }
+        
+        @media screen and (min-width:1024px) {
+            .content {
+                grid-gap: 92px;
+            }
+        }
