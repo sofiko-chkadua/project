@@ -1,5 +1,6 @@
 .footer {
-    padding-top: 64px;
+    padding-top: 68px;
+    /* хз почему по вместо 64 встает ровно ток с 68px */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -17,11 +18,14 @@
 }
 
 .footer__link {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.footer__item {
     font-weight: normal;
     font-size: 24px;
     line-height: 24px;
-    text-decoration: none;
-    color: #FFFFFF;
     padding: 16px;
 }
 
@@ -29,11 +33,11 @@
     font-size: 14px;
     line-height: 14px;
     margin: 0;
-    padding: 16px 16px 24px 16px;
+    padding: 0px 16px 24px 16px;
 }
 
 @media screen and (min-width:768px) {
-    .footer__link {
+    .footer__item {
         font-size: 16px;
         line-height: 18px;
         padding-bottom: 10px;
@@ -69,10 +73,7 @@
 }
 
 @media screen and (min-width:1280px) {
-    /* .footer__item {
-        padding-left: 0px;
-        padding-right: 0px;
-    } */
+
     .footer {
         padding: 76px 0px 0px 0px;
         /* не получилось сделать так, чтобы футер на 1280 был без паддингов по бокам, 

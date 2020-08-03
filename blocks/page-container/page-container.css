@@ -1,4 +1,13 @@
-.page-container {
+@media screen and (min-width:1024px) {
+    .page-container {
+    max-width: 928px;
+    margin: 0 auto;
+}
+}
+
+@media screen and (min-width:1280px) {
+    .page-container {
     max-width: 1184px;
     margin: 0 auto;
+}
 }

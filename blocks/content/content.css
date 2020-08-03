@@ -3,6 +3,8 @@
             display: grid;
             grid-gap: 64px;
         }
+
+        /* из-за того, что grid не встает ровно при наложении в пиксель перфекте на 1280 intro - https://yadi.sk/d/AjFUHsrpoPHvuw?w=1 */
         
         @media screen and (min-width:768px) {
             .content {

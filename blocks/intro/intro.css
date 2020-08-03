@@ -1,4 +1,7 @@
-    .intro__front-image {
+        /* из-за того, что grid не встает ровно при наложении в пиксель перфекте на 1280 intro - https://yadi.sk/d/AjFUHsrpoPHvuw?w=1 */
+
+
+.intro__front-image {
         background-repeat: no-repeat;
         background-size: cover;
         margin-bottom: 8px;
@@ -46,7 +49,9 @@
         margin: 0;
         padding-bottom: 40px;
         padding-left: 16px;
-        padding-right: 16px;
+        padding-right: 80px; 
+        /* увеличила правый паддинг, чтобы как по макету перенеслись буквы    
+        */
     }
     
     .intro__text {
@@ -74,27 +79,12 @@
         margin: 0;
     }
     
-    .intro__image-container {
-        /* нужно ли здесь задавать эту максимальную ширину? */
-        max-width: 1184px;
-        padding-left: 16px;
-        padding-right: 16px;
-        display: grid;
-        grid-gap: 12px;
-    }
+
     
-    .intro__subtext-container {
-        padding-bottom: 64px;
-    }
-    
-    .intro__image {
-        background-size: cover;
-        width: 100%;
-    }
-    
-    .intro__image:last-child {
+
+    /* .intro__image:last-child {
         margin-bottom: 64px;
-    }
+    } */
     
     @media screen and (min-width:768px) {
         .intro__image-container {
@@ -122,11 +112,13 @@
             line-height: 58px;
             padding-left: 24px;
             padding-right: 24px;
+
         }
         .intro__image-description {
             /* padding-left: 0; */
             padding-left: 24px;
             padding-right: 24px;
+            padding-bottom: 88px;
         }
         .intro__text {
             /* padding-left: 0; */
@@ -137,9 +129,6 @@
             /* padding-left: 0; */
             padding-left: 24px;
             padding-right: 24px;
-        }
-        .intro__subtext-container {
-            padding-bottom: 88px;
         }
     }
     
@@ -152,9 +141,7 @@
             padding-left: 0px;
             max-width: 690px;
         }
-        .intro__subtext-container {
-            padding-bottom: 92px;
-        }
+ 
         .intro__main-title {
             padding-left: 48px;
         }
@@ -162,13 +149,14 @@
             padding-left: 48px;
         }
         .intro__image-description {
-            padding-left: 48px;
+            padding-left: 0px;
+            /* padding-bottom: 92px; */
         }
         .intro__title {
-            padding-left: 48px;
+            padding-left: 0px;
         }
         .intro__subtext {
-            padding-left: 48px;
+            padding-left: 0px;
         }
     }
     
@@ -179,20 +167,5 @@
         .intro__image-container {
             grid-template-columns: repeat(4, 4fr);
             padding: 0;
-        }
-        .intro__main-title {
-            padding-left: 0px;
-        }
-        .intro__subtitle {
-            padding-left: 0px;
-        }
-        .intro__image-description {
-            padding-left: 0px;
-        }
-        .intro__title {
-            padding-left: 0px;
-        }
-        .intro__subtext {
-            padding-left: 0px;
         }
     }
