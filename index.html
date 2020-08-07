@@ -9,10 +9,11 @@
 </head>
 
 <body class=" page ">
-    <div class="page-container">
+    <div class="page__container">
         <header class="header ">
-            <img class="logo " src="./images/__logo.png " alt="russia logo ">
-            <ul class="header__container ">
+            <!-- это лого должно быть svg +++ --> 
+            <img class="logo " src="./images/__logo.svg " alt="russia logo">
+            <ul class="header__nav ">
                 <li>
                     <a class="header__item header__item_type_active" href="# ">Ru</a>
                 </li>
@@ -22,7 +23,8 @@
             </ul>
         </header>
         <main class="content ">
-            <section class="intro section_narrow">
+            <!-- а section +++ ? -->
+            <section class="intro section section_narrow">
                 <h1 class="intro__main-title">Путешествия по России</h1>
                 <h2 class="intro__subtitle">Настоящая страна не в выпусках новостей, а здесь.</h2>
                 <img class="intro__front-image" src="./images/тест.svg" alt=" ">
@@ -32,38 +34,44 @@
                     и суровыми льдами плато Путорана. А ещё увидеть все эти красоты можно без миллионов на счету, загранпаспорта и многочасовых перелетов. Как, например, Вера Башмакова — смелая молодая мама, которая взяла в охапку троих детей, усадила
                     их в свою «Ладу» и проехала 20 тысяч километров по родной стране. Мы выбрали и описали некоторые интересные места, достойные вашего отпуска.</p>
                 <div class="intro__subtext-container">
+                    <p class="intro__subtext">
+                        <span class="intro__span">Часовых поясов</span>11</p>
                     <p class="intro__subtext ">
-                        <span class="intro__span ">Часовых поясов </span>11</p>
+                        <span class="intro__span ">Объектов природного наследия ЮНЕСКО</span>12</p>
                     <p class="intro__subtext ">
-                        <span class="intro__span ">Объектов природного наследия ЮНЕСКО </span>12</p>
+                        <span class="intro__span ">Объектов культурного наследия ЮНЕСКО</span>16</p>
                     <p class="intro__subtext ">
-                        <span class="intro__span ">Объектов культурного наследия ЮНЕСКО </span>16</p>
+                        <span class="intro__span ">Природных заповедников</span>105</p>
                     <p class="intro__subtext ">
-                        <span class="intro__span ">Природных заповедников </span>105</p>
-                    <p class="intro__subtext ">
-                        <span class="intro__span "> Аэропортов </span>241</p>
+                        <span class="intro__span "> Аэропортов</span>241</p>
                 </div>
             </section>
-                <section class="photo-grid">
-                    <img class="photo-grid__image " src="./images/__item.png " alt=" ">
-                    <img class="photo-grid__image " src="./images/__item2.png " alt=" ">
-                    <img class="photo-grid__image " src="./images/__item3.png " alt=" ">
-                    <img class="photo-grid__image " src="./images/__item4.png " alt=" ">
-                    <img class="photo-grid__image " src="./images/__item5.png " alt=" ">
-                    <img class="photo-grid__image " src="./images/__item6.png " alt=" ">
-                    <img class="photo-grid__image " src="./images/__item7.png " alt=" ">
-                    <img class="photo-grid__image " src="./images/__item8.png " alt=" ">
-                    <img class="photo-grid__image " src="./images/__item9.png " alt=" ">
-                    <img class="photo-grid__image " src="./images/__item10.png " alt=" ">
-                    <img class="photo-grid__image " src="./images/__item11.png " alt=" ">
-                    <img class="photo-grid__image " src="./images/__item12.png " alt=" ">
+                <section class="photo-grid section">
+                    <!-- давай считать что пока мы не хотим тратить время на alt, но в бою ты их напишешь красиво и полно +++-->
+                    <img class="photo-grid__image " src="./images/__item.png " alt="поезд">
+                    <img class="photo-grid__image " src="./images/__item2.png " alt="горы">
+                    <img class="photo-grid__image " src="./images/__item3.png " alt="поле">
+                    <img class="photo-grid__image " src="./images/__item4.png " alt="туман">
+                    <img class="photo-grid__image " src="./images/__item5.png " alt="лед">
+                    <img class="photo-grid__image " src="./images/__item6.png " alt="море">
+                    <img class="photo-grid__image " src="./images/__item7.png " alt="вершины гор">
+                    <img class="photo-grid__image " src="./images/__item8.png " alt="дорожный знак">
+                    <img class="photo-grid__image " src="./images/__item9.png " alt="равнины">
+                    <img class="photo-grid__image " src="./images/__item10.png " alt="горы в тумане">
+                    <img class="photo-grid__image " src="./images/__item11.png " alt="побережье">
+                    <img class="photo-grid__image " src="./images/__item12.png " alt="горная местность">
             </section>
-            <section class="geo section_narrow ">
+            <!-- section section_narrow +++-->
+            <section class="geo section section_narrow ">
                 <article class="geo-article ">
                     <h2 class="geo-article__title ">Куршская коса</h2>
                     <a class="geo-article__link " href="http://park-kosa.ru" target="_blank">park-kosa.ru</a>
+                    <!-- когда переделаешь на гриды geo-article__container на понадобится  -->
                     <div class="geo-article__container ">
                         <img class="geo-article__image " src="./images/__imageкоса.png " alt=" ">
+                        <!-- если проставить одну и туже gird-area для разных элементов geo-article__text
+                        то они наложаться друг на друга
+                        -->
                         <p class="geo-article__text ">Здесь, посреди лесов и песчаных дюн, вы сможете увидеть два водных горизонта — спокойного Куршского залива с одной стороны и подёрнутого рябью волн Балтийского моря с другой. Уникальная природная зона на краю российского анклава.</p>
                         <p class="geo-article__text ">На этом Калининградская область не заканчивается. Для путешественника и исследователя там же по соседству — самая западная точка России, Балтийская коса, — и немецкое наследие россыпи небольших приморских городов. Атмосфера здешних
                             мест исключает суету, окуная в спокойствие природы и запах стального, прохладного моря.</p>
@@ -112,11 +120,14 @@
                     </div>
                 </article>
             </section>
-            <a class="outro outro__link" href="https://stampsy.com/na-elektrichkakh-do-baikala " target="_blank">
+            <!-- outro__link вне  outro импасибл +++-->
+            <section class="outro section">
+            <a class="outro__link" href="https://stampsy.com/na-elektrichkakh-do-baikala " target="_blank">
                 <div class="outro__opacity "> </div>
                 <h2 class="outro__title ">До Байкала «на собаках»</h2>
                 <p class="outro__description ">По мотивам учебной темы о Транссибе и iframes — путешествие от столицы до Байкала на электричках.</p>
             </a>
+        </section>
         </main>
 
         <footer class="footer ">

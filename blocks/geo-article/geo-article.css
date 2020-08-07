@@ -1,11 +1,33 @@
 .geo-article {
+    /* давай это через margin у элемента geo__item или сделай .geo гридом с grid-gap */
     padding-bottom: 48px;
-    /* display: grid;
+    
+    
+    /* 
+    В .geo-article ты пишешь:
+    display: grid;
+    grid-template-areas: 'title' 
+        'link'
+        'image'
+        'text';
+    grid-template-columns: 1fr;
+
+
+
+    С того разрешения, где ты хочешь чтобы было 2 колнки ты пишешь
+    grid-template-areas: 'title link'
+        'image text';
     grid-template-columns: repeat(2, 1fr);
-    ;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: 'title' 'link''image' 'text';
-    grid-gap: 40px; */
+    grid-gap: Xpx Ypx;
+
+    repeat(2, 1fr) - сделает 2 одинаковый ширины, но можно сделать любую пропорицию,
+    например grid-template-columns: 300px 1fr';
+
+    в grid-gap две чиселки потому что это отступы между колонками и строчками
+
+
+    Только нужно будет обертку geo-article__container  убрать
+    */
 }
 
 .geo-article_last {

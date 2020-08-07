@@ -1,171 +1,184 @@
-        /* из-за того, что grid не встает ровно при наложении в пиксель перфекте на 1280 intro - https://yadi.sk/d/AjFUHsrpoPHvuw?w=1 */
+/* 
+В тему прошлого обсуждения делать ли отступ паднгами или марджинами когда нужно от себя соседа подвинуть
+спросила коллег как делают они, все делают марджинами на простой интуиции, но еще накопали кейс,
+когда тебе нужно будет порефакторить и добавить какой-нибуль bg-color блоку, то нужно будет менять руками отступы
+на margin-ы , так что лучше сразу их через maring писать
+*/
+
+
 
 
 .intro__front-image {
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin-bottom: 8px;
-        width: 100%;
-    }
-    
-    .intro__main-title {
-        font-weight: 900;
-        font-size: 40px;
-        line-height: 44px;
-        text-align: center;
-        margin: 0 auto;
-        padding-left: 16px;
-        padding-right: 16px;
-        padding-bottom: 16px;
-        max-width: 720px;
-    }
-    
-    .intro__subtitle {
-        font-size: 16px;
-        line-height: 20px;
-        text-align: center;
-        font-weight: normal;
-        margin: 0 auto;
-        padding-bottom: 40px;
-        max-width: 640px;
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-    
-    .intro__image-description {
-        font-size: 10px;
-        line-height: 14px;
-        letter-spacing: 0.15em;
-        margin: 0;
-        padding-bottom: 64px;
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-    
-    .intro__title {
-        font-weight: 900;
-        font-size: 32px;
-        line-height: 35px;
-        margin: 0;
-        padding-bottom: 40px;
-        padding-left: 16px;
-        padding-right: 80px; 
-        /* увеличила правый паддинг, чтобы как по макету перенеслись буквы    
-        */
-    }
-    
-    .intro__text {
-        font-size: 16px;
-        line-height: 163%;
-        margin: 0;
-        padding-bottom: 32px;
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-    
-    .intro__subtext {
-        font-weight: normal;
-        font-size: 12px;
-        line-height: 18px;
-        margin: 0;
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-    
-    .intro__span {
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 18px;
-        margin: 0;
-    }
-    
+    /* bg-* стили работают только для картинок заданнях через bg-image 
+    для простых img они бесполезны и ниче не делают +++ я затупила
+    */
+   object-fit: cover;
+    margin-bottom: 8px;
+    width: 100%;
+}
 
-    
+.intro__main-title {
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 44px;
+    text-align: center;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    max-width: 720px;
+}
 
-    /* .intro__image:last-child {
-        margin-bottom: 64px;
-    } */
-    
-    @media screen and (min-width:768px) {
-        .intro__image-container {
-            grid-template-columns: repeat(2, 2fr);
-            padding-left: 24px;
-            padding-right: 24px;
-        }
-        .intro__main-title {
-            font-size: 96px;
-            line-height: 100px;
-            /* padding-left: 0; */
-            padding-left: 24px;
-            padding-right: 24px;
-            padding-bottom: 32px;
-        }
-        .intro__subtitle {
-            font-size: 30px;
-            line-height: 36px;
-            padding-left: 24px;
-            padding-right: 24px;
-            padding-bottom: 56px;
-        }
-        .intro__title {
-            font-size: 54px;
-            line-height: 58px;
-            padding-left: 24px;
-            padding-right: 24px;
+.intro__subtitle {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    font-weight: normal;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    max-width: 640px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
 
-        }
-        .intro__image-description {
-            /* padding-left: 0; */
-            padding-left: 24px;
-            padding-right: 24px;
-            padding-bottom: 88px;
-        }
-        .intro__text {
-            /* padding-left: 0; */
-            padding-left: 24px;
-            padding-right: 24px;
-        }
-        .intro__subtext {
-            /* padding-left: 0; */
-            padding-left: 24px;
-            padding-right: 24px;
-        }
-    }
-    
-    @media screen and (min-width:1024px) {
-        .intro__image-container {
-            grid-template-columns: repeat(3, 3fr);
-            padding: 0;
-        }
-        .intro__text {
-            padding-left: 0px;
-            max-width: 690px;
-        }
+.intro__image-description {
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0.15em;
+    margin: 0;
+    padding-bottom: 64px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.intro__title {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 35px;
+    margin: 0;
+    padding-bottom: 40px;
+    padding-left: 16px;
+    padding-right: 80px;
+}
+
+.intro__text {
+    font-size: 16px;
+    /* в макете можент написано быть в любых единицах, но лучше блюсти консистентность и перевести в px +++*/
+    line-height: 26px;
+    margin: 0;
+    padding-bottom: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.intro__subtext-container{
+
+}
+.intro__subtext {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+    /* давай padding зададим у intro__subtext-container а не у каждой айтемки */
  
-        .intro__main-title {
-            padding-left: 48px;
-        }
-        .intro__subtitle {
-            padding-left: 48px;
-        }
-        .intro__image-description {
-            padding-left: 0px;
-            /* padding-bottom: 92px; */
-        }
-        .intro__title {
-            padding-left: 0px;
-        }
-        .intro__subtext {
-            padding-left: 0px;
-        }
+}
+
+.intro__span {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+    margin-right: 5px;
+    /* мы про отступ говорили между цифрой и intro__span, так вот я бред сказала - нужно сделать 
+    через margin-right, потому что если данные будут динамически к тебе приходить, то у них может пробела не быть +++
+    */
+}
+
+@media screen and (min-width:768px) {
+    .intro__image-container {
+        grid-template-columns: repeat(2, 2fr);
+        padding-left: 24px;
+        padding-right: 24px;
     }
+    .intro__main-title {
+        font-size: 96px;
+        line-height: 100px;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-bottom: 32px;
+    }
+    .intro__subtitle {
+        font-size: 30px;
+        line-height: 36px;
     
-    @media screen and (min-width:1280px) {
-        .intro__subtitle {
-            padding-bottom: 64px;
-        }
-        .intro__image-container {
-            grid-template-columns: repeat(4, 4fr);
-            padding: 0;
-        }
+        /* этому можно  padding-left padding-right  не перекрывать
+        он и так не по ширине  всего блока и они ниче не делают
+         +++ */
+        padding-bottom: 56px;
     }
+    .intro__title {
+        font-size: 54px;
+        line-height: 58px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .intro__image-description {
+        /* padding-left: 0; */
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-bottom: 88px;
+    }
+    .intro__text {
+        /* padding-left: 0; */
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .intro__subtext {
+        /* padding-left: 0; */
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+  
+    .intro__text {
+        /* я бы и правый сбросила на случай больше количества контента +++*/
+        padding-left: 0px;
+        padding-right: 0px;
+        max-width: 690px;
+    }
+    .intro__main-title {
+        /* зачем тут padding-left ? он начинает ломать верстку +++*/
+        /* padding-left: 48px; */
+    }
+    .intro__subtitle {
+        /* и этот +++*/
+        /* padding-left: 48px; */
+    }
+    .intro__image-description {
+        /* я бы и правый сбросила на случай больше количества контента +++*/
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .intro__title {
+        /* я бы и правый сбросила на случай больше количества контента +++*/
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .intro__subtext {
+        /* я бы и правый сбросила на случай больше количества контента +++*/
+        padding-left: 0px;
+        padding-right: 0px;
+
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .intro__subtitle {
+        padding-bottom: 64px;
+    }
+
+    /* такого класса уже нет в html +++ */
+   
+}
