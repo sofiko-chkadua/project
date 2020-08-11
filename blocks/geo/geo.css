@@ -1,0 +1,31 @@
+.geo {
+  display: grid;
+  grid-row-gap: 24px;
+  /* в макете 48px , сделала  24 потому что иначе норм не ложится в пиксель перфекте */
+}
+
+@media screen and (min-width: 768px) {
+  .geo {
+    display: grid;
+    grid-row-gap: 56px;
+    /* в макете 96px , сделала  60 потому что иначе норм не ложится в пиксель перфекте */
+
+    padding-bottom: 88px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .geo {
+    display: grid;
+    grid-row-gap: 68px;
+    /* в макете 80px , сделала  60 потому что иначе норм не ложится в пиксель перфекте */
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .geo {
+    display: grid;
+    grid-row-gap: 60px;
+    /* в макете 80px , сделала  60 потому что иначе норм не ложится в пиксель перфекте */
+  }
+}

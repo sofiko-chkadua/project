@@ -1,10 +1,10 @@
-@media screen and (min-width:1280px) {
-    .section {
-        width: 100%;
-    }
+@media screen and (min-width: 1280px) {
+  .section {
+    width: 100%;
+  }
 
-    .section_narrow {
-        max-width: calc(100% - 100px*2);
-        margin: 0 auto;
-    }
+  .section_narrow {
+    max-width: calc(100% - 100px * 2);
+    margin: 0 auto;
+  }
 }

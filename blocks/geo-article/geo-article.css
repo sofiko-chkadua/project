@@ -1,136 +1,152 @@
 .geo-article {
-    /* давай это через margin у элемента geo__item или сделай .geo гридом с grid-gap */
-    padding-bottom: 48px;
-    
-    
-    /* 
-    В .geo-article ты пишешь:
-    display: grid;
-    grid-template-areas: 'title' 
-        'link'
-        'image'
-        'text';
-    grid-template-columns: 1fr;
-
-
-
-    С того разрешения, где ты хочешь чтобы было 2 колнки ты пишешь
-    grid-template-areas: 'title link'
-        'image text';
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: Xpx Ypx;
-
-    repeat(2, 1fr) - сделает 2 одинаковый ширины, но можно сделать любую пропорицию,
-    например grid-template-columns: 300px 1fr';
-
-    в grid-gap две чиселки потому что это отступы между колонками и строчками
-
-
-    Только нужно будет обертку geo-article__container  убрать
-    */
-}
-
-.geo-article_last {
-    padding-bottom: 0px;
+  display: grid;
+  grid-template-areas:
+    "title"
+    "image"
+    "text";
+  grid-template-columns: 1fr;
+  grid-row-gap: 38px;
+  /* по фигме не 38px, но ровнее стало с 38 */
 }
 
 .geo-article__title {
-    grid-area: title;
-    font-weight: 900;
-    font-size: 32px;
-    line-height: 35px;
-    margin: 0;
-   margin-bottom: 32px;
-    padding-left: 16px;
-    padding-right: 16px;
+  grid-area: title;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 35px;
+  padding: 0;
+  align-self: end;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 .geo-article__link {
-    grid-area: link;
-    display: none;
+  grid-area: link;
+  display: none;
+  align-self: end;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration-line: underline;
+  position: relative;
+  color: #ffffff;
 }
 
 .geo-article__link:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .geo-article__image {
-    grid-area: image;
-    margin-bottom: 32px;
-    min-height: 320px;
-    width: 100%;
-    object-fit: cover;
+  grid-area: image;
+  min-height: 320px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.geo-article__text-container {
+  grid-area: text;
+  font-size: 16px;
+  line-height: 26px;
+  padding: 0;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 .geo-article__text {
-    grid-area: text;
-    font-size: 16px;
-    margin: 0;
-    line-height: 163%;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-bottom: 24px;
+  margin: 0;
+  margin-bottom: 24px;
 }
- 
+
 .geo-article__text_last {
-    margin-bottom: 0px;
+  margin: 0;
 }
 
-@media screen and (min-width:768px) {
-    .geo-article__title {
-        font-size: 42px;
-        line-height: 46px;
-        padding-left: 24px;
-        padding-right: 24px;
-    }
-    .geo-article {
-        padding-bottom: 72px;
-    }
-    .geo-article__image {
-        padding-left: 24px;
-        padding-right: 24px;
-    }
-    .geo-article__text {
-        padding-left: 24px;
-        padding-right: 24px;
-    }
+@media screen and (min-width: 768px) {
+  .geo-article {
+    grid-template-areas:
+      "title link"
+      "image text";
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px 28px;
+  }
 
-    .geo-article__link {
-        display: block;
-        font-size: 18px;
-        line-height: 22px;
-        text-decoration-line: underline;
-        color: #FFFFFF;
-        position: relative;
-    }
+  .geo-article__text-container {
+    margin-left: 0px;
+    margin-right: 24px;
+  }
+
+  .geo-article__title {
+    font-size: 42px;
+    line-height: 46px;
+    max-width: 320px; /* сделала, чтобы заголовок переносился и стал в 2 строки */
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  .geo-article__title_small {
+    min-width: 340px;
+    /* чтобы был в одну строчку */
+  }
+  .geo-article__image {
+    max-height: 340px;
+    max-width: 340px;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  .geo-article__link {
+    display: block;
+  }
+
+  .geo-article__link:before {
+    content: "URL";
+    position: absolute;
+    bottom: 34px;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.2em;
+    color: #aaaaaa;
+  }
 }
 
-@media screen and (min-width:1024px) {
-    .geo-article__title {
-        font-size: 72px;
-        line-height: 76px;
-        padding-left: 48px;
-        padding-right: 48px;
-    }
-  
-    .geo-article__link:before {
-        content: "URL";
-        position: absolute;
-        bottom: 34px;
-        font-size: 12px;
-        line-height: 170%;
-        letter-spacing: 0.2em;
-        color: #AAAAAA;
-    }
-    .geo-article {
-        padding-bottom: 80px;
-    }
-    .geo-article__image {
-        padding-left: 48px;
-        padding-right: 48px;
-    }
-    .geo-article__text {
-        padding-left: 48px;
-        padding-right: 48px;
-    }
+@media screen and (min-width: 1024px) {
+  .geo-article {
+    grid-gap: 24px 4px;
+  }
+  .geo-article__title {
+    font-size: 72px;
+    line-height: 76px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .geo-article__image {
+    max-height: 440px;
+    max-width: 440px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .geo-article__text-container {
+    font-size: 18px;
+    line-height: 29px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .geo-article {
+    grid-gap: 32px 24px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .geo-article__title {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .geo-article__image {
+    max-height: 460px;
+    max-width: 460px;
+  }
 }

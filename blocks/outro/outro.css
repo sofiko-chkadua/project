@@ -1,116 +1,129 @@
 .outro {
-    /* все картинки на инглише именовать без пробелов */
-    background-image: url(../../images/на\ собаках.svg);
-    background-repeat: no-repeat;
-    min-height: 200px;
-    /* ширина не нужна +++*/
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    color: #FFFFFF;
+  /* все картинки на инглише именовать без пробелов */
+  background-image: url(../../images/dog.svg);
+  background-repeat: no-repeat;
+  min-height: 200px;
+  /* ширина не нужна +++*/
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .outro__link {
-    height: 100%;
-    width: 100%;
-    z-index: 3;
+  z-index: 3;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 /* 
 1) давай ее сделаем через псевдо элемент 
 2) ховер сейчас не работае когда наводишь на текст внутри outro - в текущей реализации это можно
-починить через .outro:hover .outro__opacity { opacity: 0.8; } - тут есть вложенность но она норм
+починить через .outro:hover .outro__opacity { opacity: 0.8; } - тут есть вложенность но она норм — СДЕЛАЛА ТАК
 
 если делать через псевдоэлемент, то будет .outro:hover:before { opacity: 0.8; }
 */
 .outro__opacity {
-    position: absolute;
-    background-color: #2A2C2F;
-    opacity: 0.3;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  background-color: #2a2c2f;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
 }
 
-.outro__opacity:hover {
-    opacity: 0.8;
+.outro:hover .outro__opacity {
+  opacity: 0.8;
 }
 
 .outro__title {
-    font-size: 32px;
-    line-height: 35px;
-    text-align: center;
-    font-weight: 900;
-    /* ему не нужны margin и padding (разве что обнулить и сделать отступ внизу), 
+  font-size: 32px;
+  line-height: 35px;
+  text-align: center;
+  font-weight: 900;
+  /* ему не нужны margin и padding (разве что обнулить и сделать отступ внизу), 
     он уже выравнивается по центру родителем через flex
     чтобы перемещалось слово на сл строку лучше сделать max-width меньше. Не важно что ширина в фигме задана
-    как 288, важно как потом вживуют будет
+    как 288, важно как потом вживуют будет +++ ПОЧИНИЛА
     */
-    margin: 33px 16px 16px 16px;
-    z-index: 2;
-    max-width: 288px;
-    padding-left: 20px;
-    padding-right: 20px;
-    box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 32px;
+  z-index: 2;
+  max-width: 250px;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .outro__description {
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-    margin: 0;
-    /* ему тоже паддинги не нужны, измени max-width */
-    padding: 0px 20px 16px 20px;
-    z-index: 2;
-    max-width: 288px;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  margin: 0;
+  /* ему тоже паддинги не нужны, измени max-width +++ ПОЧИНИЛА */
+  padding: 0px;
+  z-index: 2;
+  max-width: 250px;
 }
-
 
 /* в целом имеешь право писать такие медиа чтобы было посимпотичнее,
 но лучше бы посомотреть следующую распространенную ширину устройства тут https://www.screensizemap.com/ 
 и начинать писать медиа с нее - она там 360. Про все другие брейкпоинты как например 500 лучше посмотреть
-на сайте какая ширина дивайса ближе - 480 или 540 и выбрать
+на сайте какая ширина дивайса ближе - 480 или 540 и выбрать +++ ПОЧИНИЛА
 */
-@media screen and (min-width:321px) {
-    .outro {
-        min-height: 300px;
-    }
+@media screen and (min-width: 360px) {
+  .outro__link {
+    min-height: 300px;
+  }
 }
 
-@media screen and (min-width:500px) {
-    .outro {
-        min-height: 400px;
-    }
+@media screen and (min-width: 480px) {
+  .outro__link {
+    min-height: 400px;
+  }
 }
 
-@media screen and (min-width:768px) {
-    .outro {
-        min-height: 480px;
-    }
-    .outro__title {
-        font-size: 72px;
-        line-height: 76px;
-        max-width: 560px;
-    }
-    .outro__description {
-        font-size: 18px;
-        line-height: 22px;
-        max-width: 360px;
-    }
+@media screen and (min-width: 768px) {
+  .outro__link {
+    min-height: 480px;
+  }
+  .outro__title {
+    font-size: 72px;
+    line-height: 76px;
+    max-width: 560px;
+  }
+  .outro__description {
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 360px;
+  }
 }
 
-@media screen and (min-width:1024px) {
-    .outro {
-        min-height: 640px;
-    }
+@media screen and (min-width: 1024px) {
+  .outro {
+    min-height: 640px;
+  }
+  .outro__link {
+    min-height: 640px;
+  }
 }
 
-@media screen and (min-width:1280px) {
-    .outro {
-        min-height: 740px;
-    }
+@media screen and (min-width: 1280px) {
+  .outro {
+    min-height: 740px;
+    max-width: 1184px;
+  }
+
+  .outro__link {
+    min-height: 740px;
+  }
 }
