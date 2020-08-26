@@ -1,10 +1,9 @@
-/* Футер на 768 и выше не совпадает в пиксель перфекте из-за того, что гриды в гео-артикле отже съезжают, я пыталась починить6 но не получается */
-
 .footer {
   padding-top: 64px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
 }
 
@@ -26,19 +25,18 @@
 .footer__item {
   font-weight: normal;
   font-size: 24px;
-  line-height: 24px;
   padding: 16px;
 }
 
 .footer__copywright {
   font-size: 14px;
   line-height: 14px;
-  padding: 0px 16px 24px 16px;
+  padding-left: 16px;
+  margin:0;
 }
 
 @media screen and (min-width: 768px) {
   .footer__item {
-    /* у footer__item  на  768px отступы не те и footer__copywright  тоже едет выше и правее +++ ПОЧИНИЛА */
     font-size: 16px;
     line-height: 18px;
     padding-bottom: 10px;
@@ -56,9 +54,6 @@
   }
   .footer__copywright {
     font-size: 14px;
-    line-height: 50px;
-    /* сделала 50, но почему-то если в разные случаи открывать сайт в браузере, это то чинит вертску, то ломает (сложила два паддинга по 16 от item плюс фонт сайз 18 */
-    padding-bottom: 10px;
   }
 }
 
@@ -73,12 +68,5 @@
   .footer {
     padding: 92px 0px 0px 0px;
     max-width: 1216px;
-    /* есть несколько способов починить левый отступ
-        1) заигнорить его у первого элемента и с этим жить
-        2) вынети футер из page__container и задать ему макс-ширинуну больне чем о page__container на величину падинга *2
-        3) отрицательный margin
-
-        самый правильный 2й, потому что 1й портить юзабилити, а в 3м ориц маржины считаются воообще супер крайностью +++ ПОЧИНИЛА
-        */
   }
 }

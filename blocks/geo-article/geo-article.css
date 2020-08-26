@@ -6,7 +6,6 @@
     "text";
   grid-template-columns: 1fr;
   grid-row-gap: 38px;
-  /* по фигме не 38px, но ровнее стало с 38 */
 }
 
 .geo-article__title {
@@ -77,15 +76,16 @@
   .geo-article__title {
     font-size: 42px;
     line-height: 46px;
-    max-width: 320px; /* сделала, чтобы заголовок переносился и стал в 2 строки */
+    max-width: 320px; 
     margin-left: 24px;
     margin-right: 24px;
   }
 
+
   .geo-article__title_small {
     min-width: 340px;
-    /* чтобы был в одну строчку */
   }
+  
   .geo-article__image {
     max-height: 340px;
     max-width: 340px;

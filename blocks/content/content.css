@@ -4,14 +4,6 @@
   grid-gap: 64px;
 }
 
-/* https://yadi.sk/d/AjFUHsrpoPHvuw?w=1 - это не потому что грид не встает ровно, а потому что нужно 
-для прописать width: 100% - фишка внутренностей гридов
-
-У тебя сейчас для section есть width 100%, но ты проставляешь только модификатор секйии без самого блока
-что само по себе ошибка. Т.е. все кейсы типа "intro section_narrow" должны быть "intro section section_narrow"
-+++ ПОЧИНИЛА
-*/
-
 @media screen and (min-width: 768px) {
   .content {
     grid-gap: 88px;

@@ -5,7 +5,6 @@
   padding: 16px 16px 48px 16px;
 }
 
-/* думаю название header__nav лучше +++*/
 .header__nav {
   display: flex;
   list-style: none;

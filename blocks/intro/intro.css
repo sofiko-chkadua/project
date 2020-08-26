@@ -1,14 +1,4 @@
-/* 
-В тему прошлого обсуждения делать ли отступ паднгами или марджинами когда нужно от себя соседа подвинуть
-спросила коллег как делают они, все делают марджинами на простой интуиции, но еще накопали кейс,
-когда тебе нужно будет порефакторить и добавить какой-нибуль bg-color блоку, то нужно будет менять руками отступы
-на margin-ы , так что лучше сразу их через maring писать
-*/
-
 .intro__front-image {
-  /* bg-* стили работают только для картинок заданнях через bg-image 
-    для простых img они бесполезны и ниче не делают +++ я затупила
-    */
   object-fit: cover;
   margin-bottom: 8px;
   width: 100%;
@@ -60,7 +50,6 @@
 
 .intro__text {
   font-size: 16px;
-  /* в макете можент написано быть в любых единицах, но лучше блюсти консистентность и перевести в px +++*/
   line-height: 26px;
   margin: 0;
   padding-bottom: 32px;
@@ -77,7 +66,6 @@
   font-size: 12px;
   line-height: 18px;
   margin: 0;
-  /* давай padding зададим у intro__subtext-container а не у каждой айтемки */
 }
 
 .intro__span {
@@ -86,9 +74,6 @@
   line-height: 18px;
   margin: 0;
   margin-right: 5px;
-  /* мы про отступ говорили между цифрой и intro__span, так вот я бред сказала - нужно сделать 
-    через margin-right, потому что если данные будут динамически к тебе приходить, то у них может пробела не быть +++
-    */
 }
 
 @media screen and (min-width: 768px) {
@@ -107,10 +92,6 @@
   .intro__subtitle {
     font-size: 30px;
     line-height: 36px;
-
-    /* этому можно  padding-left padding-right  не перекрывать
-        он и так не по ширине  всего блока и они ниче не делают
-         +++ */
     padding-bottom: 56px;
   }
   .intro__title {
@@ -120,13 +101,11 @@
     padding-right: 24px;
   }
   .intro__image-description {
-    /* padding-left: 0; */
     padding-left: 24px;
     padding-right: 24px;
     padding-bottom: 88px;
   }
   .intro__subtext-container {
-    /* padding-left: 0; */
     padding-left: 24px;
     padding-right: 24px;
   }
@@ -134,31 +113,20 @@
 
 @media screen and (min-width: 1024px) {
   .intro__text {
-    /* я бы и правый сбросила на случай больше количества контента +++*/
     padding-left: 0px;
     padding-right: 0px;
     max-width: 690px;
   }
-  .intro__main-title {
-    /* зачем тут padding-left ? он начинает ломать верстку +++*/
-    /* padding-left: 48px; */
-  }
-  .intro__subtitle {
-    /* и этот +++*/
-    /* padding-left: 48px; */
-  }
+
   .intro__image-description {
-    /* я бы и правый сбросила на случай больше количества контента +++*/
     padding-left: 0px;
     padding-right: 0px;
   }
   .intro__title {
-    /* я бы и правый сбросила на случай больше количества контента +++*/
     padding-left: 0px;
     padding-right: 0px;
   }
   .intro__subtext-container {
-    /* я бы и правый сбросила на случай больше количества контента +++*/
     padding-left: 0px;
     padding-right: 0px;
   }
